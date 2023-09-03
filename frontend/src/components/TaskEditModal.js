@@ -75,4 +75,8 @@ const TaskEditModal = ({ taskData, toggle, onSave }) => {
   );
 };
 
+<<<<<<< HEAD
 export default TaskEditModal;
+=======
+export default TaskEditModal;
+>>>>>>> 62a913c (Initial commit)

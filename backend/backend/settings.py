@@ -11,6 +11,10 @@ DEBUG = True
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '158.160.1.127',
                  'taskistudy77.hopto.org']
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 62a913c (Initial commit)
 # Application definition
 
 INSTALLED_APPS = [

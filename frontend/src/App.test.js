@@ -6,4 +6,8 @@ import React from 'react';
    const div = document.createElement('div');
    const root = createRoot(div);
    root.render(<App />);
+<<<<<<< HEAD
  });
+=======
+ });
+>>>>>>> 62a913c (Initial commit)
