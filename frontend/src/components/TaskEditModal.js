@@ -14,10 +14,12 @@ import {
 const TaskEditModal = ({ taskData, toggle, onSave }) => {
   const [item, setItem] = useState(taskData);
 
+  // Обновление состояния, когда taskData меняется
   useEffect(() => {
     setItem(taskData);
   }, [taskData]);
 
+  // Обработчик изменения значений полей формы
   const handleChange = (e) => {
     let { name, value } = e.target;
     if (e.target.type === "checkbox") {
@@ -28,29 +30,29 @@ const TaskEditModal = ({ taskData, toggle, onSave }) => {
 
   return (
     <Modal isOpen={true} toggle={toggle}>
-      <ModalHeader toggle={toggle}>Task Item</ModalHeader>
+      <ModalHeader toggle={toggle}>Задача</ModalHeader>
       <ModalBody>
         <Form>
           <FormGroup>
-            <Label for="task-title">Title</Label>
+            <Label for="task-title">Заголовок</Label>
             <Input
               type="text"
               id="task-title"
               name="title"
               value={item.title}
               onChange={handleChange}
-              placeholder="Enter Task Title"
+              placeholder="Введите заголовок задачи"
             />
           </FormGroup>
           <FormGroup>
-            <Label for="task-description">Description</Label>
+            <Label for="task-description">Описание</Label>
             <Input
               type="text"
               id="task-description"
               name="description"
               value={item.description}
               onChange={handleChange}
-              placeholder="Enter Task description"
+              placeholder="Введите описание задачи"
             />
           </FormGroup>
           <FormGroup check>
@@ -61,22 +63,19 @@ const TaskEditModal = ({ taskData, toggle, onSave }) => {
                 checked={item.completed}
                 onChange={handleChange}
               />
-              Completed
+              Завершено
             </Label>
           </FormGroup>
         </Form>
       </ModalBody>
       <ModalFooter>
         <Button color="success" onClick={() => onSave(item)}>
-          Save
+          Сохранить
         </Button>
       </ModalFooter>
     </Modal>
   );
 };
 
-<<<<<<< HEAD
 export default TaskEditModal;
-=======
-export default TaskEditModal;
->>>>>>> 62a913c (Initial commit)
+
